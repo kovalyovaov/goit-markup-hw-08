@@ -1,0 +1,24 @@
+.logo {
+    font-family: "Raleway", sans-serif;
+    @include font(26px, 700, 1.19, 0.03em);
+    
+    color: var(--accent-color);
+  }
+  
+  .header-logo-accent {
+    color: var(--header-text-color);
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+  }
+  }
+  
+  .footer-logo-accent {
+    color: white;
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+  }
+  }
+
+  

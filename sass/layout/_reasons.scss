@@ -1,0 +1,74 @@
+
+
+
+  .reasons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 94px;
+  }
+
+  .reasons-list__item {
+    width: 270px;
+  }
+
+  .reasons-list__icon--link {
+    width: 270px;
+    height: 120px;
+    background-color: #f5f4fa;
+    display: flex;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .work-list__link {
+    width: 370px;
+  }
+  
+  .reasons-list__pre--titile {
+    margin-bottom: 10px;
+    @include font(14px, 700, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+  
+  .reasons-list__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+  }
+  
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .work-list__img {
+    width: 370px;
+    height: 294px;
+    position: relative;
+  }
+  /*----текст на картинку----*/
+  
+  .work-list__actions {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+  
+    
+    @include font(14px, 700, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--btn-color);
+  }
+  
+  

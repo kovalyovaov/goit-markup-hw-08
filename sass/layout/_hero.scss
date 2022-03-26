@@ -1,0 +1,45 @@
+.hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #2f303a;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/fone.jpg);
+  }
+  
+  .hero__title {
+    margin-bottom: 30px;
+  
+    @include font(44px, 900, 1.36, 0.06em);
+  
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--btn-color);
+  }
+  
+  .hero__btn {
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: 1px solid transparent;
+  
+    font-family: inherit;
+    @include font(16px, 700, 1.87, 0.06em);
+  
+    color: var(--btn-color);
+
+    & {
+      background-color: var(--accent-color);
+    }
+  }
+ 
