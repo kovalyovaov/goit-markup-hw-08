@@ -1,15 +1,13 @@
-
-
-
   .reasons-list {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 94px;
   }
 
   .reasons-list__item {
-    width: 270px;
+    // width: 270px;
+    width: 100%;
   }
 
   .reasons-list__icon--link {

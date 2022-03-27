@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -477,14 +477,12 @@ button {
 }
 
 .reasons-list {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 94px;
 }
 
 .reasons-list__item {
-  width: 270px;
+  width: 100%;
 }
 
 .reasons-list__icon--link {
