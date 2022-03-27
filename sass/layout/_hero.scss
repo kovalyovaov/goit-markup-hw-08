@@ -1,10 +1,14 @@
 .hero {
+
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-  
-    max-width: 1600px;
-    height: 600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    width: 100%;
+
+    // padding-top: 200px;
+    // padding-bottom: 200px;
+    // max-width: 1600px;
+    // height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
@@ -16,16 +20,23 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/fone.jpg);
+
+      @include desk {
+    padding-top: 200px;
+    padding-bottom: 200px;
+      }
   }
   
   .hero__title {
+    
+    @include font(26px, 900, 1.62, 0.06em);
     margin-bottom: 30px;
-  
-    @include font(44px, 900, 1.36, 0.06em);
-  
     text-transform: uppercase;
     text-align: center;
     color: var(--btn-color);
+    @include desk {
+      @include font(44px, 900, 1.36, 0.06em);
+    }
   }
   
   .hero__btn {

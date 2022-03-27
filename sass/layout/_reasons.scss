@@ -2,16 +2,33 @@
     // display: flex;
     // flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 94px;
+    margin-bottom: -30px;
+
+    @media screen and (min-width:768px) {
+       display: flex;
+    flex-wrap: wrap;
+    }
+    @media screen and (min-width:1200px) {
+      margin-bottom: 94px;
+    }
+
+
   }
 
   .reasons-list__item {
+    margin-bottom: 30px; 
     // width: 270px;
     width: 100%;
+    @media screen and (min-width:768px) {
+   width: calc(100% / 2 - 30px);
+   }
+   @media screen and (min-width:1200px) {
+    width: calc(100% / 4 - 30px);
+   }
   }
 
   .reasons-list__icon--link {
-    width: 270px;
+    // width: 270px;
     height: 120px;
     background-color: #f5f4fa;
     display: flex;
@@ -20,23 +37,40 @@
     align-items: center;
     justify-content: center;
   }
-
-  .work-list__link {
-    width: 370px;
-  }
   
   .reasons-list__pre--titile {
     margin-bottom: 10px;
+    text-align: center;
+    @media screen and (min-width:768px) {
+      text-align: left;
+    }
+
+    @media screen and (min-width:1200px) {
+      text-align: left;
+    }
+
     @include font(14px, 700, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--title-color);
   }
   
+  .work {
+    @media screen and (max-width:1200px) {
+      display: none;
+    }
+    
+  
+  }
+
   .reasons-list__text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--text-color);
+  }
+
+  .work-list__link {
+    width: 370px;
   }
   
   .work-list {
