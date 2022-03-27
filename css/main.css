@@ -86,7 +86,7 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -159,14 +159,25 @@ button {
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 100%;
   background-color: var(--btn-color);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal-btn {
@@ -188,11 +199,20 @@ button {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--header-text-color);
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form-field + .form-field {
@@ -204,8 +224,8 @@ button {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 42px;
   outline: none;
+  padding: 12px 42px;
 }
 
 .modal-input:hover, .modal-input:focus {
@@ -240,8 +260,16 @@ button {
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px 16px;
   outline: none;
+  padding: 12px 16px;
+}
+
+.modal-input-comment::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input-comment:hover, .modal-input-comment:focus {
@@ -285,15 +313,32 @@ button {
 
 .modal-label-policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--text-color);
   display: flex;
   align-items: center;
   /*margin-bottom: 30px;*/
-  justify-content: center;
   /*margin-top: 20px;*/
+}
+
+@media screen and (min-width: 480px) {
+  .modal-label-policy {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-label-policy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-check-icon {
@@ -822,8 +867,27 @@ button {
 .filtr-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+  margin-top: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .filtr-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filtr-list {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.filtr-list__item {
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .filtr-list__item:not(:last-child) {
@@ -856,11 +920,17 @@ button {
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-list {
+    margin-right: -30px;
+  }
 }
 
 .gallery-list__item {
-  width: 370px;
-  margin-right: 30px;
+  width: 100%;
   margin-bottom: 30px;
   background: #ffffff;
   border: 1px solid #eeeeee;
@@ -868,12 +938,24 @@ button {
   cursor: pointer;
 }
 
-.gallery-list__item:nth-child(n + 7) {
-  margin-bottom: 0px;
+@media screen and (min-width: 768px) {
+  .gallery-list__item {
+    width: calc( 100% / 2 - 30px);
+    margin-right: 30px;
+  }
 }
 
-.gallery-list__item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .gallery-list__item {
+    width: calc( 100% / 3 - 30px);
+  }
+  2
+.gallery-list__item:nth-child(n + 7) {
+    margin-bottom: 0px;
+  }
+  .gallery-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .gallery-list__item:hover, .gallery-list__item:focus {
@@ -883,6 +965,7 @@ button {
 .gallery-list__img {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .gallery-list__top--text {

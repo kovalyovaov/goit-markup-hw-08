@@ -1,21 +1,37 @@
 .filtr-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 56px;
-  }
+    margin-bottom: 40px;
+    margin-top: -15px;
   
-  .filtr-list__item:not(:last-child) {
-    margin-right: 8px;
+    @include tab {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @include desk {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
+
+  // .filtr-list__item:nth-child(n+4){
+  //   margin-top: 15px;
+  //   @include tab {
+  //     margin-top: 0px;
+  //   }
+  // }
   
+  .filtr-list__item {
+    flex-wrap: wrap;
+    margin-top: 15px;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
   .filtr-list__btm {
     font-family: inherit;
     @include font(16px, 500, 1.62, 0.03em);
-    // font-weight: 500;
-    // font-size: 16px;
-    // line-height: 1.62;
-    // letter-spacing: 0.03em;
     color: var(--header-text-color);
     cursor: pointer;
     border-radius: 4px;
