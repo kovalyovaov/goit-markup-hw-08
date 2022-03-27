@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <div class="main">
                 <nav class="nav">
@@ -38,9 +38,55 @@
                         <use href="./images/icons.svg#icon-Vector"></use>
                     </svg>+38 096 111 11 11</a></li>
                 </ul>
+
+
+                <button type="button" class="menu-open-btn" data-mobmenu-open>
+                    <svg class="menu-open-icon">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="menu__cont is-hidden" data-mobmenu>
+                    <div class="container">
+                        <button type="button" class="menu-close-btn" data-mobmenu-close>
+                            <svg class="menu-close-icon">
+                                <use href="./images/icons.svg#icon-Vector-2"></use>
+                            </svg>
+                        </button>
+        
+                        <ul class="menu-list">
+                            <li class="menu-list__item"><a href="" class="menu-list__link">Студия</a></li>
+                            <li class="menu-list__item"><a href="./portfolio.html" class="menu-list__link">Портфолио</a></li>
+                            <li class="menu-list__item"><a href="" class="menu-list__link">Контакты</a></li>
+                        </ul>
+                        <ul class="menu-adress">
+                            
+                            <li class="menu-adress__item">
+                                <a href="tel:+380961111111" class="menu-adress__link--tel">+38 096 111 11 11</a></li>
+
+                                <li class="menu-adress__item">
+                                    <a href="mailto:info@devstudio.com" class="menu-adress__link--email">info@devstudio.com</a></li>
+                        </ul>
+        
+                    <ul class="menu-social-list">
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">Instagram</a>
+                        </li>
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">Twitter</a>
+                        </li>
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">Facebook</a>
+                        </li>
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">LinkedIn</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
             </div>
+
             </div>
-    </header> -->
+    </header>
 
     <main>
         <section class="hero">
@@ -386,10 +432,12 @@
     
 
 
-    <!-- <footer>
+    <footer>
         <div class="container footer-container">
             <div class="footer-contakt">
-         <a href="" lang="en" class="logo">Web<span class="footer-logo-accent">Studio</span></a>
+         <div class="footer-logo">
+            <a href="" lang="en" class="logo">Web<span class="footer-logo-accent">Studio</span></a>
+         </div>
         <address>
             <ul class="footer-list">
                 <li class="footer-list__item"><a href="https://goo.gl/maps/ytzTi8YxMLyK7yX88" 
@@ -442,11 +490,12 @@
             </div>
         </form>
         </div>
-    </footer> -->
+    </footer>
 
     
 
 <script src="./js/modal.js"></script>
+<script src="./js/mobmenu.js"></script>
 
 </body>
 </html>
