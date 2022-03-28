@@ -13,34 +13,83 @@
             integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="main">
-                <nav class="nav">
-                    <a href="" lang="en" class="logo">Web<span class="header-logo-accent">Studio</span></a>
-                    <ul class="nav-list">
-                        <li class="nav-list__item"><a href="./index.html" class="nav-list__link">Студия</a></li>
-                        <li class="nav-list__item"><a href="" class="nav-list__link current">Портфолио</a></li>
-                        <li class="nav-list__item"><a href="" class="nav-list__link">Контакты</a></li>
-                    </ul>
-                </nav>
-                <ul class="header-adress">
-                    <li class="header-adress__item"><a href="mailto:info@devstudio.com" class="header-adress__link--email">
-                        <svg class="header-adress__icon--email">
-                        <use href="./images/icons.svg#icon-envelope-1"></use>
-                    </svg>info@devstudio.com</a></li>
-                    <li class="header-adress__item"><a href="tel:+380961111111" class="header-adress__link--tel">
-                      <svg class="header-adress__icon--tel">
-                        <use href="./images/icons.svg#icon-Vector"></use>
-                    </svg>+38 096 111 11 11</a></li>
+<header class="header">
+    <div class="container">
+        <div class="main">
+            <nav class="nav">
+                <a href="" lang="en" class="logo">Web<span class="header-logo-accent">Studio</span></a>
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="./index.html" class="nav-list__link ">Студия</a></li>
+                    <li class="nav-list__item"><a href="./portfolio.html" class="nav-list__link current">Портфолио</a></li>
+                    <li class="nav-list__item"><a href="" class="nav-list__link">Контакты</a></li>
                 </ul>
+            </nav>
+            <ul class="header-adress">
+                <li class="header-adress__item"><a href="mailto:info@devstudio.com" class="header-adress__link--email">
+                        <svg class="header-adress__icon--email">
+                            <use href="./images/icons.svg#icon-envelope-1"></use>
+                        </svg>info@devstudio.com</a></li>
+                <li class="header-adress__item"><a href="tel:+380961111111" class="header-adress__link--tel">
+                        <svg class="header-adress__icon--tel">
+                            <use href="./images/icons.svg#icon-Vector"></use>
+                        </svg>+38 096 111 11 11</a></li>
+            </ul>
+
+
+            <button type="button" class="menu-open-btn" data-mobmenu-open>
+                <svg class="menu-open-icon">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="menu__cont is-hidden" data-mobmenu>
+                <div class="container">
+                    <button type="button" class="menu-close-btn" data-mobmenu-close>
+                        <svg class="menu-close-icon">
+                            <use href="./images/icons.svg#icon-Vector-2"></use>
+                        </svg>
+                    </button>
+
+                    <ul class="menu-list">
+                        <li class="menu-list__item"><a href="" class="menu-list__link">Студия</a></li>
+                        <li class="menu-list__item"><a href="./portfolio.html" class="menu-list__link">Портфолио</a>
+                        </li>
+                        <li class="menu-list__item"><a href="" class="menu-list__link">Контакты</a></li>
+                    </ul>
+                    <ul class="menu-adress">
+
+                        <li class="menu-adress__item">
+                            <a href="tel:+380961111111" class="menu-adress__link--tel">+38 096 111 11 11</a>
+                        </li>
+
+                        <li class="menu-adress__item">
+                            <a href="mailto:info@devstudio.com" class="menu-adress__link--email">info@devstudio.com</a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-social-list">
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">Instagram</a>
+                        </li>
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">Twitter</a>
+                        </li>
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">Facebook</a>
+                        </li>
+                        <li class="menu-social-list__item">
+                            <a href="" class="menu-social-list__img">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            </div>
-    </header>
+        </div>
+
+    </div>
+</header>
 
     
     <main>
@@ -60,7 +109,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                            <img src="./images/portfolio1.jpg" alt="Технокряк">
+                            <picture>
+                                <source srcset="./images/g1.jpg 1x, 
+                                                          ./images/g1_2x.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/g1_tab.jpg 1x, 
+                                                                  ./images/g1_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                            
+                                <source srcset="./images/g1_mob.jpg 1x, 
+                                                                  ./images/g1_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                                <img src="/images/g1.jpg" alt="Технокряк">
+                            </picture>
                             <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                 позволит посетителю получить
                                 исчерпывающие сведения  о компании или частном лице.</p>
@@ -74,7 +132,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio2.jpg" alt="Постер Нью Орлеан" width="370" height="294">
+                    <picture>
+                        <source srcset="./images/g2.jpg 1x, 
+                                                                      ./images/g2_2x.jpg 2x" media="(min-width: 1200px)" />
+                        <source srcset="./images/g2_tab.jpg 1x, 
+                                                                              ./images/g2_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                    
+                        <source srcset="./images/g2_mob.jpg 1x, 
+                                                                              ./images/g2_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                        <img src="/images/g2.jpg" alt="Постер New Orlean vs Golden Star">
+                    </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -88,7 +155,18 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio3.jpg" alt="Ресторан" width="370" height="294">
+                <picture>
+                    <source srcset="./images/g3.jpg 1x, 
+                                        ./images/g3_2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/g3_tab.jpg 1x, 
+                        ./images/g3_tab_2x.jpg 2x"
+                        media="(min-width: 768px)" />
+                
+                    <source srcset="./images/g3_mob.jpg 1x, 
+                       ./images/g3_mob_2x.jpg 2x"
+                        media="(min-width: 380px)" />
+                    <img src="/images/g3.jpg" alt="Ресторан Seafood">
+                </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -102,7 +180,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio4.jpg" alt="Проект прайм" width="370" height="294">
+                <picture>
+                    <source srcset="./images/g4.jpg 1x, 
+                                        ./images/g4_2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/g4_tab.jpg 1x, 
+                                       ./images/g4_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                
+                    <source srcset="./images/g4_mob.jpg 1x, 
+                                    ./images/g4_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                    <img src="/images/g4.jpg" alt="Проект Prime">
+                </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -116,7 +203,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio5.jpg" alt="Проект бокс" width="370" height="294">
+                    <picture>
+                        <source srcset="./images/g5.jpg 1x, 
+                                             ./images/g5_2x.jpg 2x" media="(min-width: 1200px)" />
+                        <source srcset="./images/g5_tab.jpg 1x, 
+                                         ./images/g5_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                    
+                        <source srcset="./images/g5_mob.jpg 1x, 
+                                          ./images/g5_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                        <img src="/images/g5.jpg" alt="Проект Boxes">
+                    </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -130,7 +226,17 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio6.jpg" alt="Вдохновение" width="370" height="294">
+                            <picture>
+                                <source srcset="./images/g6.jpg 1x, 
+                                                                        ./images/g6_2x.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/g6_tab.jpg 1x, 
+                                         ./images/g6_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                            
+                                <source srcset="./images/g6_mob.jpg 1x, 
+                                          ./images/g6_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                                <img src="/images/g6.jpg" alt="Inspiration has no Borders">
+                            </picture>
+                   
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -144,7 +250,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio7.jpg" alt="Лимитированое издание" width="370" height="294">
+                    <picture>
+                        <source srcset="./images/g7.jpg 1x, 
+                                             ./images/g7_2x.jpg 2x" media="(min-width: 1200px)" />
+                        <source srcset="./images/g7_tab.jpg 1x, 
+                                        ./images/g7_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                    
+                        <source srcset="./images/g7_mob.jpg 1x, 
+                                                      ./images/g7_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                        <img src="/images/g7.jpg" alt="Издание Limited Edition">
+                    </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -158,7 +273,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio8.jpg" alt="Проект лаб" width="370" height="294">
+                    <picture>
+                        <source srcset="./images/g8.jpg 1x, 
+                                                                                    ./images/g8_2x.jpg 2x" media="(min-width: 1200px)" />
+                        <source srcset="./images/g8_tab.jpg 1x, 
+                                                     ./images/g8_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                    
+                        <source srcset="./images/g8_mob.jpg 1x, 
+                                                      ./images/g8_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                        <img src="/images/g8.jpg" alt="Проект LAB">
+                    </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -172,7 +296,16 @@
                 <li class="gallery-list__item" tabindex="0">
                     <!-- <a href="" class="gallery-link"> -->
                         <div class="gallery-list__img">
-                    <img src="./images/portfolio9.jpg" alt="Рост" width="370" height="294">
+                <picture>
+                    <source srcset="./images/g9.jpg 1x, 
+                                                                                ./images/g9_2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/g9_tab.jpg 1x, 
+                                                 ./images/g9_tab_2x.jpg 2x" media="(min-width: 768px)" />
+                
+                    <source srcset="./images/g9_mob.jpg 1x, 
+                                                  ./images/g9_mob_2x.jpg 2x" media="(min-width: 380px)" />
+                    <img src="/images/g9.jpg" alt="Growing Business">
+                </picture>
                     <p class="gallery-list__top--text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
                         исчерпывающие сведения  о компании или частном лице.</p>
@@ -248,7 +381,7 @@
         </form>
         </div>
     </footer>
-    
+    <script src="./js/mobmenu.js"></script>
     </body>
     
     </html>
