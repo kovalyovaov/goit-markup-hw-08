@@ -164,12 +164,13 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px;
+  padding: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+    padding: 40px;
   }
 }
 
@@ -417,7 +418,7 @@ button {
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
-    margin-left: 93px;
+    margin-left: 88px;
   }
 }
 
@@ -429,6 +430,7 @@ button {
 .main {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list__link {
@@ -462,8 +464,6 @@ button {
 @media screen and (min-width: 768px) {
   .header-adress {
     display: block;
-    padding-top: 21px;
-    padding-bottom: 21px;
   }
 }
 
@@ -580,8 +580,11 @@ button {
   z-index: 1;
 }
 
-.menu-list {
-  margin-bottom: 302px;
+.menu__cont .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .menu-list__link {
@@ -602,7 +605,6 @@ button {
 
 .menu-social-list {
   display: flex;
-  margin-top: 64px;
   justify-content: flex-start;
 }
 
@@ -678,7 +680,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg_img_mob.jpg");
@@ -761,12 +762,7 @@ button {
   .reasons-list {
     display: flex;
     flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .reasons-list {
-    margin-bottom: 94px;
+    margin-left: -30px;
   }
 }
 
@@ -778,6 +774,7 @@ button {
 @media screen and (min-width: 768px) {
   .reasons-list__item {
     width: calc(100% / 2 - 30px);
+    margin-left: 30px;
   }
 }
 
@@ -823,6 +820,12 @@ button {
 @media screen and (max-width: 1200px) {
   .work {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work {
+    margin-bottom: 94px;
   }
 }
 
@@ -1060,8 +1063,8 @@ button {
 
 @media screen and (min-width: 1200px) {
   .filtr-list {
-    justify-content: center;
     margin-bottom: 50px;
+    justify-content: center;
   }
 }
 
@@ -1128,13 +1131,6 @@ button {
 @media screen and (min-width: 1200px) {
   .gallery-list__item {
     width: calc( 100% / 3 - 30px);
-  }
-  2
-.gallery-list__item:nth-child(n + 7) {
-    margin-bottom: 0px;
-  }
-  .gallery-list__item:nth-child(3n) {
-    margin-right: 0;
   }
 }
 
@@ -1206,12 +1202,21 @@ footer {
   background-color: #2f303a;
 }
 
+.footer-contakt {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-contakt {
+    margin-bottom: 0;
+  }
+}
+
 .footer-list__item:not(:last-child) {
   margin-bottom: 8px;
 }
 
 .footer-list {
-  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -1282,7 +1287,6 @@ footer {
 
 .footer-social-list {
   display: flex;
-  margin-bottom: 60px;
 }
 
 .footer-social-list__link {
@@ -1311,14 +1315,18 @@ footer {
 .footer-container {
   display: flex;
   align-items: baseline;
-  flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
@@ -1332,10 +1340,32 @@ footer {
   }
 }
 
+.footer-social {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-social {
+    margin-bottom: 0;
+  }
+}
+
 .footer-sent {
   display: block;
   padding-left: auto;
   padding-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-sent {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-sent {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1345,7 +1375,6 @@ footer {
 }
 
 .footer-sent__input {
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1358,6 +1387,12 @@ footer {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-sent__input {
+    width: 358px;
+  }
 }
 
 .footer-sent__btn {

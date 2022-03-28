@@ -23,14 +23,8 @@
     }
 
     @include desk {
-      width: calc( 100% / 3 - 30px);2
-       &:nth-child(n + 7) {
-      margin-bottom: 0px;
-    }
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    } 
+      width: calc( 100% / 3 - 30px);
+  
     }   
 
     &:hover,
