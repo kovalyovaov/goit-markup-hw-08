@@ -1,14 +1,15 @@
-@import "./components/container";
 @import "./utils/variables";
 @import "./utils/hidden";
-@import "./base/reset";
-@import "./base/common";
 @import "./utils/hidden";
 @import "./utils/mixins";
+
+@import "./base/reset";
+@import "./base/common";
 
 @import "./components/title";
 
 @import "./components/modal";
+@import "./components/container";
 
 @import "./components/logo";
 @import "./layout/header";
@@ -20,11 +21,3 @@
 @import "./layout/filtr";
 @import "./layout/gallery";
 @import "./layout/footer";
-
-
-
-
-
-
-
-

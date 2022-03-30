@@ -29,3 +29,29 @@
     padding-bottom: 94px;
   }
 }
+.section__filter {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include tab {
+    padding-bottom: 30px;
+  }
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+}
+.section-gallery {
+  padding-top: 40px;
+  @include tab {
+    padding-top: 30px;
+  }
+  @include desk {
+    padding-top: 50px;
+  }
+}
+
+.section-work {
+  @include desk {
+    padding-bottom: 94px;
+  }
+}

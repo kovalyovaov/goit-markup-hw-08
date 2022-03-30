@@ -1,16 +1,19 @@
 /*-----------подчеркивание----------*/
 .current {
-    color: var(--accent-color);
+  color: var(--accent-color);
 
-    &::after {
-      display: inline-block;
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 4px;
-      background-color: var(--accent-color);
-      border-radius: 2px;
-      left: 0;
-      bottom: -1px;
-    }
+  &::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -1px;
   }
+}
+.current_mob {
+  color: var(--accent-color);
+}
